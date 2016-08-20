@@ -92,6 +92,8 @@ github.gists.create({
 // heuristics).
 function computeFileList (paths) {
   return paths.reduce(function (acc, path) {
+    console.log("paths : "+paths)
+
     var stat = fs.statSync(path)
 
     if (stat.isFile()) {
